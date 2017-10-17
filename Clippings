@@ -1,0 +1,53 @@
+
+
+
+        NotificationCenter.default.addObserver( self, selector:#selector(AlarmController.significantTimeChange(note:)), name:NSNotification.Name.NSSystemClockDidChange, object: nil)
+
+    @objc func significantTimeChange( note:Notification ) {
+        self.setupAlarm()
+    }
+
+
+/*
+// MARK:- HTTP Server
+import GCDWebServers
+
+extension ViewController : GCDWebServerDelegate {
+
+    func setupServer() {
+        webServer.delegate = self
+
+        let handlers = ["/onOff":{ self.onOffButton() },
+                        "/sleep":{ self.sleepButton() },
+                        "/stationOne":{ self.stationOneButton() },
+                        "/stationTwo":{ self.stationTwoButton() },
+                        "/stationThree":{ self.stationThreeButton() }]
+
+        for (path,fn) in handlers {
+            webServer.addHandler(forMethod: "GET", path:path, request: GCDWebServerRequest.self, processBlock: {request in
+                GCDAdditions.onMain {
+                    fn()
+                }
+                return GCDWebServerDataResponse(html:"<html><body><p>\(path)</p></body></html>")
+            })
+        }
+
+        webServer.start(withPort: 8080, bonjourName: "RossRadio")
+    }
+
+    func webServerDidCompleteBonjourRegistration(_ server: GCDWebServer!) {
+        status?.text = server.bonjourServerURL.absoluteString
+    }
+
+}
+*/
+
+struct Speech {
+
+    static func say(_ s:String ) {
+        let utterance = AVSpeechUtterance(string: s)
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate - 0.1
+        AVSpeechSynthesizer().speak(utterance)
+    }
+
+}

@@ -1,0 +1,15 @@
+{
+  "stations": {
+    "702": "http://www.abc.net.au/res/streaming/audio/aac/local_sydney.pls",
+    "NOVA 969": "http://streaming.novaentertainment.com.au/nova969",
+    "RN": "http://www.abc.net.au/res/streaming/audio/aac/radio_national.pls",
+    "NR": "http://www.abc.net.au/res/streaming/audio/aac/news_radio.pls",
+    "CLASSIC FM": "http://www.abc.net.au/res/streaming/audio/aac/classic_fm.pls",
+    "TRIPLE J": "http://www.abc.net.au/res/streaming/audio/aac/triplej.pls",
+    "KIIS": "http://icecast.arn.com.au/1065.mp3"
+  },
+  "alarmStation":"RN",
+  "rightButtonStation":"NR",
+  "leftButtonStation":"RN",
+  "defaultStation":"RN"
+}

@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		400BC1101F83672E008F82CC /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400BC10F1F83672E008F82CC /* Radio.swift */; };
+		400BC1121F8368AD008F82CC /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; };
+		400BC1131F8368B3008F82CC /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; };
+		400BC1141F8368B3008F82CC /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40668E781F8D729300FF1795 /* 21199__acclivity__morninghasbroken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */; };
+		40668E7A1F901EAF00FF1795 /* WeatherUndergroundKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */; };
+		407E20E81DE0F5E90066F3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */; };
+		407E20EA1DE0F5E90066F3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E20E91DE0F5E90066F3F8 /* ViewController.swift */; };
+		407E20ED1DE0F5E90066F3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407E20EB1DE0F5E90066F3F8 /* Main.storyboard */; };
+		407E20EF1DE0F5E90066F3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407E20EE1DE0F5E90066F3F8 /* Assets.xcassets */; };
+		407E20F21DE0F5E90066F3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407E20F01DE0F5E90066F3F8 /* LaunchScreen.storyboard */; };
+		407E20FD1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E20FC1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift */; };
+		407E21281DE0F71F0066F3F8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 407E21271DE0F71F0066F3F8 /* libz.tbd */; };
+		407E212D1DE39A500066F3F8 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E212C1DE39A500066F3F8 /* Clock.swift */; };
+		407E21371DE439780066F3F8 /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21361DE439780066F3F8 /* Sleep.swift */; };
+		407E213A1DE634310066F3F8 /* iTunesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21391DE634310066F3F8 /* iTunesStore.swift */; };
+		407E21441DE636DA0066F3F8 /* DebuggingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */; };
+		407E562E1F835E5B00CB00CC /* GCDAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E562D1F835E5B00CB00CC /* GCDAdditions.swift */; };
+		407F3D771F8731FF002F3749 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407F3D761F8731FF002F3749 /* Preferences.swift */; };
+		40B478211EA985BB000C8C08 /* Typed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21411DE636C30066F3F8 /* Typed.swift */; };
+		40B4782A1EA9E7C5000C8C08 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B478291EA9E7C5000C8C08 /* Weather.swift */; };
+		40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21301DE39C660066F3F8 /* ViewAdditions.swift */; };
+		40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */; };
+		40B788571F84CB7300A9D835 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 40B788561F84CB7300A9D835 /* Stations.json */; };
+		40B7885B1F858C4100A9D835 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40B7885A1F858C4100A9D835 /* Defaults.plist */; };
+		40B7885D1F85A23E00A9D835 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B7885C1F85A23E00A9D835 /* Alarm.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		407E20F91DE0F5E90066F3F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407E20DC1DE0F5E90066F3F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 407E20E31DE0F5E90066F3F8;
+			remoteInfo = ClockRadioTerminal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		407E21251DE0F6E60066F3F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				400BC1141F8368B3008F82CC /* fliclib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		400BC10F1F83672E008F82CC /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Radio.swift; path = Source/Radio.swift; sourceTree = "<group>"; };
+		400BC1111F8368AD008F82CC /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
+		400BC1171F847561008F82CC /* Clippings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clippings; sourceTree = "<group>"; };
+		40668E751F8D6B9F00FF1795 /* Read Me.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Read Me.md"; sourceTree = "<group>"; };
+		40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 21199__acclivity__morninghasbroken.mp3; path = Resources/21199__acclivity__morninghasbroken.mp3; sourceTree = "<group>"; };
+		40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUndergroundKey.swift; sourceTree = "<group>"; };
+		407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockRadioTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
+		407E20E91DE0F5E90066F3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Source/ViewController.swift; sourceTree = "<group>"; };
+		407E20EC1DE0F5E90066F3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		407E20EE1DE0F5E90066F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		407E20F11DE0F5E90066F3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		407E20F31DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockRadioTerminalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		407E20FC1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRadioTerminalTests.swift; sourceTree = "<group>"; };
+		407E20FE1DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		407E21271DE0F71F0066F3F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		407E212C1DE39A500066F3F8 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = Source/Clock.swift; sourceTree = "<group>"; };
+		407E21301DE39C660066F3F8 /* ViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewAdditions.swift; path = Source/ViewAdditions.swift; sourceTree = "<group>"; };
+		407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUIPortable.swift; path = Source/NSUIPortable.swift; sourceTree = "<group>"; };
+		407E21361DE439780066F3F8 /* Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sleep.swift; path = Source/Sleep.swift; sourceTree = "<group>"; };
+		407E21391DE634310066F3F8 /* iTunesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesStore.swift; path = Source/iTunesStore.swift; sourceTree = "<group>"; };
+		407E21411DE636C30066F3F8 /* Typed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Typed.swift; path = Source/Typed.swift; sourceTree = "<group>"; };
+		407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebuggingAdditions.swift; path = Source/DebuggingAdditions.swift; sourceTree = "<group>"; };
+		407E562D1F835E5B00CB00CC /* GCDAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GCDAdditions.swift; path = Source/GCDAdditions.swift; sourceTree = "<group>"; };
+		407F3D761F8731FF002F3749 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		40B3B9C61E1BA36D001C6306 /* To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
+		40B478291EA9E7C5000C8C08 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = Source/Weather.swift; sourceTree = "<group>"; };
+		40B788561F84CB7300A9D835 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
+		40B7885A1F858C4100A9D835 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Defaults.plist; path = Resources/Defaults.plist; sourceTree = "<group>"; };
+		40B7885C1F85A23E00A9D835 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = Source/Alarm.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		407E20E11DE0F5E90066F3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400BC1131F8368B3008F82CC /* fliclib.framework in Frameworks */,
+				400BC1121F8368AD008F82CC /* fliclib.framework in Frameworks */,
+				407E21281DE0F71F0066F3F8 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407E20F51DE0F5E90066F3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		405928471E25FED3003961CC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				407E562D1F835E5B00CB00CC /* GCDAdditions.swift */,
+				407E21301DE39C660066F3F8 /* ViewAdditions.swift */,
+				407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */,
+				407E21411DE636C30066F3F8 /* Typed.swift */,
+				407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		407E20DB1DE0F5E90066F3F8 = {
+			isa = PBXGroup;
+			children = (
+				40668E751F8D6B9F00FF1795 /* Read Me.md */,
+				40B3B9C61E1BA36D001C6306 /* To Do */,
+				400BC1171F847561008F82CC /* Clippings */,
+				407F3D761F8731FF002F3749 /* Preferences.swift */,
+				40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */,
+				40B788561F84CB7300A9D835 /* Stations.json */,
+				407E20E61DE0F5E90066F3F8 /* ClockRadioTerminal */,
+				407E20FB1DE0F5E90066F3F8 /* ClockRadioTerminalTests */,
+				407E20E51DE0F5E90066F3F8 /* Products */,
+				407E21261DE0F71E0066F3F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		407E20E51DE0F5E90066F3F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */,
+				407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		407E20E61DE0F5E90066F3F8 /* ClockRadioTerminal */ = {
+			isa = PBXGroup;
+			children = (
+				407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */,
+				407E20E91DE0F5E90066F3F8 /* ViewController.swift */,
+				407E21381DE4397E0066F3F8 /* Model */,
+				405928471E25FED3003961CC /* Utils */,
+				407E56301F83621F00CB00CC /* Resources */,
+			);
+			name = ClockRadioTerminal;
+			sourceTree = "<group>";
+		};
+		407E20FB1DE0F5E90066F3F8 /* ClockRadioTerminalTests */ = {
+			isa = PBXGroup;
+			children = (
+				407E20FC1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift */,
+				407E20FE1DE0F5E90066F3F8 /* Info.plist */,
+			);
+			path = ClockRadioTerminalTests;
+			sourceTree = "<group>";
+		};
+		407E21261DE0F71E0066F3F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				400BC1111F8368AD008F82CC /* fliclib.framework */,
+				407E21271DE0F71F0066F3F8 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		407E21381DE4397E0066F3F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				407E21391DE634310066F3F8 /* iTunesStore.swift */,
+				40B478291EA9E7C5000C8C08 /* Weather.swift */,
+				400BC10F1F83672E008F82CC /* Radio.swift */,
+				40B7885C1F85A23E00A9D835 /* Alarm.swift */,
+				407E212C1DE39A500066F3F8 /* Clock.swift */,
+				407E21361DE439780066F3F8 /* Sleep.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		407E56301F83621F00CB00CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				407E20EB1DE0F5E90066F3F8 /* Main.storyboard */,
+				407E20F01DE0F5E90066F3F8 /* LaunchScreen.storyboard */,
+				407E20EE1DE0F5E90066F3F8 /* Assets.xcassets */,
+				407E20F31DE0F5E90066F3F8 /* Info.plist */,
+				40B7885A1F858C4100A9D835 /* Defaults.plist */,
+				40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		407E20E31DE0F5E90066F3F8 /* ClockRadioTerminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407E21011DE0F5E90066F3F8 /* Build configuration list for PBXNativeTarget "ClockRadioTerminal" */;
+			buildPhases = (
+				407E20E01DE0F5E90066F3F8 /* Sources */,
+				407E20E11DE0F5E90066F3F8 /* Frameworks */,
+				407E20E21DE0F5E90066F3F8 /* Resources */,
+				407E21251DE0F6E60066F3F8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClockRadioTerminal;
+			productName = ClockRadioTerminal;
+			productReference = 407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		407E20F71DE0F5E90066F3F8 /* ClockRadioTerminalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407E21041DE0F5E90066F3F8 /* Build configuration list for PBXNativeTarget "ClockRadioTerminalTests" */;
+			buildPhases = (
+				407E20F41DE0F5E90066F3F8 /* Sources */,
+				407E20F51DE0F5E90066F3F8 /* Frameworks */,
+				407E20F61DE0F5E90066F3F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				407E20FA1DE0F5E90066F3F8 /* PBXTargetDependency */,
+			);
+			name = ClockRadioTerminalTests;
+			productName = ClockRadioTerminalTests;
+			productReference = 407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		407E20DC1DE0F5E90066F3F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Ross Tulloch";
+				TargetAttributes = {
+					407E20E31DE0F5E90066F3F8 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZR7LDMP3AD;
+						ProvisioningStyle = Automatic;
+					};
+					407E20F71DE0F5E90066F3F8 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZR7LDMP3AD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 407E20E31DE0F5E90066F3F8;
+					};
+				};
+			};
+			buildConfigurationList = 407E20DF1DE0F5E90066F3F8 /* Build configuration list for PBXProject "ClockRadioTerminal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 407E20DB1DE0F5E90066F3F8;
+			productRefGroup = 407E20E51DE0F5E90066F3F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				407E20E31DE0F5E90066F3F8 /* ClockRadioTerminal */,
+				407E20F71DE0F5E90066F3F8 /* ClockRadioTerminalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		407E20E21DE0F5E90066F3F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40668E781F8D729300FF1795 /* 21199__acclivity__morninghasbroken.mp3 in Resources */,
+				40B7885B1F858C4100A9D835 /* Defaults.plist in Resources */,
+				407E20F21DE0F5E90066F3F8 /* LaunchScreen.storyboard in Resources */,
+				407E20EF1DE0F5E90066F3F8 /* Assets.xcassets in Resources */,
+				407E20ED1DE0F5E90066F3F8 /* Main.storyboard in Resources */,
+				40B788571F84CB7300A9D835 /* Stations.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407E20F61DE0F5E90066F3F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		407E20E01DE0F5E90066F3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407E562E1F835E5B00CB00CC /* GCDAdditions.swift in Sources */,
+				40B478211EA985BB000C8C08 /* Typed.swift in Sources */,
+				407F3D771F8731FF002F3749 /* Preferences.swift in Sources */,
+				40B7885D1F85A23E00A9D835 /* Alarm.swift in Sources */,
+				407E21441DE636DA0066F3F8 /* DebuggingAdditions.swift in Sources */,
+				400BC1101F83672E008F82CC /* Radio.swift in Sources */,
+				40B4782A1EA9E7C5000C8C08 /* Weather.swift in Sources */,
+				40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */,
+				407E20EA1DE0F5E90066F3F8 /* ViewController.swift in Sources */,
+				40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */,
+				407E212D1DE39A500066F3F8 /* Clock.swift in Sources */,
+				407E20E81DE0F5E90066F3F8 /* AppDelegate.swift in Sources */,
+				407E21371DE439780066F3F8 /* Sleep.swift in Sources */,
+				407E213A1DE634310066F3F8 /* iTunesStore.swift in Sources */,
+				40668E7A1F901EAF00FF1795 /* WeatherUndergroundKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407E20F41DE0F5E90066F3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407E20FD1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		407E20FA1DE0F5E90066F3F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 407E20E31DE0F5E90066F3F8 /* ClockRadioTerminal */;
+			targetProxy = 407E20F91DE0F5E90066F3F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		407E20EB1DE0F5E90066F3F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407E20EC1DE0F5E90066F3F8 /* Base */,
+			);
+			name = Main.storyboard;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		407E20F01DE0F5E90066F3F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407E20F11DE0F5E90066F3F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		407E20FF1DE0F5E90066F3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[sdk=iphonesimulator*]" = IOS_SIMULATOR;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		407E21001DE0F5E90066F3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		407E21021DE0F5E90066F3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = ZR7LDMP3AD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/fliclib-ios-master",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		407E21031DE0F5E90066F3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = ZR7LDMP3AD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/fliclib-ios-master",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		407E21051DE0F5E90066F3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZR7LDMP3AD;
+				INFOPLIST_FILE = ClockRadioTerminalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockRadioTerminal.app/ClockRadioTerminal";
+			};
+			name = Debug;
+		};
+		407E21061DE0F5E90066F3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZR7LDMP3AD;
+				INFOPLIST_FILE = ClockRadioTerminalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockRadioTerminal.app/ClockRadioTerminal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407E20DF1DE0F5E90066F3F8 /* Build configuration list for PBXProject "ClockRadioTerminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407E20FF1DE0F5E90066F3F8 /* Debug */,
+				407E21001DE0F5E90066F3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407E21011DE0F5E90066F3F8 /* Build configuration list for PBXNativeTarget "ClockRadioTerminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407E21021DE0F5E90066F3F8 /* Debug */,
+				407E21031DE0F5E90066F3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407E21041DE0F5E90066F3F8 /* Build configuration list for PBXNativeTarget "ClockRadioTerminalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407E21051DE0F5E90066F3F8 /* Debug */,
+				407E21061DE0F5E90066F3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 407E20DC1DE0F5E90066F3F8 /* Project object */;
+}

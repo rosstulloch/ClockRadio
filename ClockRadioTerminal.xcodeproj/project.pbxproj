@@ -63,7 +63,6 @@
 		400BC10F1F83672E008F82CC /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Radio.swift; path = Source/Radio.swift; sourceTree = "<group>"; };
 		400BC1111F8368AD008F82CC /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
 		400BC1171F847561008F82CC /* Clippings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clippings; sourceTree = "<group>"; };
-		40668E751F8D6B9F00FF1795 /* Read Me.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Read Me.md"; sourceTree = "<group>"; };
 		40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 21199__acclivity__morninghasbroken.mp3; path = Resources/21199__acclivity__morninghasbroken.mp3; sourceTree = "<group>"; };
 		40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUndergroundKey.swift; sourceTree = "<group>"; };
 		407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockRadioTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +90,7 @@
 		40B788561F84CB7300A9D835 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		40B7885A1F858C4100A9D835 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Defaults.plist; path = Resources/Defaults.plist; sourceTree = "<group>"; };
 		40B7885C1F85A23E00A9D835 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = Source/Alarm.swift; sourceTree = "<group>"; };
+		40EE2D381F95AB7C000A4194 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 		407E20DB1DE0F5E90066F3F8 = {
 			isa = PBXGroup;
 			children = (
-				40668E751F8D6B9F00FF1795 /* Read Me.md */,
+				40EE2D381F95AB7C000A4194 /* README.md */,
 				40B3B9C61E1BA36D001C6306 /* To Do */,
 				400BC1171F847561008F82CC /* Clippings */,
 				407F3D761F8731FF002F3749 /* Preferences.swift */,

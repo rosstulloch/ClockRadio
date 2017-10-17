@@ -55,39 +55,60 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vf8-rY-v5Z">
-                                <rect key="frame" x="16" y="502" width="140.5" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" axis="vertical" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="vf8-rY-v5Z">
+                                <rect key="frame" x="78" y="20" width="218" height="50.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8z-6L-nxK">
-                                        <rect key="frame" x="0.0" y="0.0" width="140.5" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i8z-6L-nxK">
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-4Z-8Pp">
-                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-4Z-8Pp">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="30"/>
                                                 <state key="normal" title="LEFT"/>
                                                 <connections>
                                                     <action selector="leftClickOnce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6BM-t2-TG6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9i-1d-HNb">
-                                                <rect key="frame" x="37.5" y="0.0" width="58" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9i-1d-HNb">
+                                                <rect key="frame" x="72.5" y="0.0" width="73" height="30"/>
                                                 <state key="normal" title="CENTRE"/>
                                                 <connections>
                                                     <action selector="middleOnce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McH-k5-0QJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-8m-Ppl">
-                                                <rect key="frame" x="95.5" y="0.0" width="45" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-8m-Ppl">
+                                                <rect key="frame" x="145.5" y="0.0" width="72.5" height="30"/>
                                                 <state key="normal" title="RIGHT"/>
                                                 <connections>
+                                                    <action selector="rightClickDouble:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="mFs-V0-RJk"/>
                                                     <action selector="rightClickOnce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3B-j2-3QQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DEBUG BUTTONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkL-de-IGZ">
-                                        <rect key="frame" x="0.0" y="30" width="140.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ViB-eZ-zow">
+                                        <rect key="frame" x="0.0" y="18" width="218" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iID-q1-mT0" userLabel="MIDDLE HOLD">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
+                                                <state key="normal" title="MIDDLE HOLD"/>
+                                                <connections>
+                                                    <action selector="middleHold:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u6K-aH-jYu"/>
+                                                    <action selector="rightClickDouble:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="PNE-Fz-yS6"/>
+                                                    <action selector="rightClickOnce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRa-iP-jjK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDP-UN-iwi" userLabel="RIGHT DOUBLE">
+                                                <rect key="frame" x="109" y="0.0" width="109" height="30"/>
+                                                <state key="normal" title="RIGHT DOUBLE"/>
+                                                <connections>
+                                                    <action selector="rightClickDouble:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9RB-VB-uIQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMULATOR BUTTONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkL-de-IGZ">
+                                        <rect key="frame" x="0.0" y="36" width="218" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -98,9 +119,11 @@
                         <constraints>
                             <constraint firstItem="A5X-gM-ZRu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ZO-fd-SZO"/>
                             <constraint firstItem="dRN-dg-bIc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2vU-kk-UJZ"/>
+                            <constraint firstItem="vf8-rY-v5Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AiG-xL-zOg"/>
                             <constraint firstItem="O5D-Xg-bxA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Em5-br-TW2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iDV-1T-7CA" secondAttribute="trailing" id="FaP-G4-qF7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZw-Xm-BrF" secondAttribute="bottom" constant="15" id="NRj-1I-N8I"/>
+                            <constraint firstItem="vf8-rY-v5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nhk-fX-skz"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dRN-dg-bIc" secondAttribute="trailingMargin" id="Nr9-yK-NQO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="YZw-Xm-BrF" secondAttribute="leading" id="R87-Og-7MD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dRN-dg-bIc" secondAttribute="leading" id="Rel-XH-z6E"/>

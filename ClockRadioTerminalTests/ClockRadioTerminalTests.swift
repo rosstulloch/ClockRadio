@@ -9,12 +9,26 @@
 import XCTest
 @testable import ClockRadioTerminal
 
-class ClockRadioTerminalTests: XCTestCase {
+class ClockRadioTerminalTests: XCTestCase, WeatherDelegate {
+
+    var expect:XCTestExpectation?
+
+    func weatherDidChange(_ wc:WeatherController) {
+        XCTAssert(wc.forecast?.hiC != nil)
+        expect!.fulfill()
+    }
+    
+    func weatherError(_ wc:WeatherController, error: NSError) {
+        XCTAssert(error == nil)
+        expect!.fulfill()
+    }
+    
 
   //  let weather = WeatherController()
     
     override func setUp() {
         super.setUp()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -31,20 +45,18 @@ class ClockRadioTerminalTests: XCTestCase {
     }
     
     func testWeather() {
-        var expect = expectation(description:"weather will be downloaded.")
-        WeatherController().forecastQuery(Preferences().forecastUrl) { forecast, error in
-            XCTAssert(error == nil)
-            XCTAssert(forecast?.hiC != nil)
-            expect.fulfill()
-        }
+    
+        expect = expectation(description:"weather will be downloaded.")
+        
+        let wc = WeatherController()
+        wc.delegate = self
+        
+        wc.forecastQuery(Preferences.forecastUrl)
         waitForExpectations(timeout: 10)
 
-        expect = expectation(description:"weather will NOT be downloaded.")
-        WeatherController().forecastQuery(URL(string: "http://apple.com")!) { forecast, error in
-            XCTAssert(error != nil)
-            expect.fulfill()
-        }
-        waitForExpectations(timeout: 10)
+     //   expect = expectation(description:"weather will NOT be downloaded.")
+     //   WeatherController().forecastQuery(URL(string: "http://apple.com")!)
+     //   waitForExpectations(timeout: 10)
     }
     
     func testPerformanceExample() {

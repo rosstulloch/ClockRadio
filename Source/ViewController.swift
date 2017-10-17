@@ -78,7 +78,7 @@ class ViewController: UIViewController, UIApplicationDelegate {
         self.bottomRightImage.image = self.albumImage
         
         GCDAdditions.perform(afterDelay:30.0) {
-            self.weatherDidChange()
+            self.weatherDidChange(self.weather)
         }
     }
 }
@@ -267,7 +267,7 @@ extension ViewController : WeatherDelegate {
         return false
     }
 
-    func weatherDidChange() {
+    func weatherDidChange(_ wc:WeatherController) {
 
         if self.isNight {
             // Just show temp...
@@ -287,7 +287,7 @@ extension ViewController : WeatherDelegate {
         }
     }
     
-    func weatherError(error: NSError) {
+    func weatherError(_ wc:WeatherController, error: NSError) {
    //     ShowErrorAlert(error)
         // Showing errors via an alert is a poor idea since it will block the hide UI til dismissed.
         // Just log the errors.

@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 protocol WeatherDelegate {
-    func weatherDidChange()
-    func weatherError(error:NSError)
+    func weatherDidChange(_ wc:WeatherController)
+    func weatherError(_ wc:WeatherController, error:NSError)
 }
 
 ///// JSON blobs from WeatherUnderground...
@@ -65,6 +65,11 @@ class WeatherController {
     private(set) var forecast:Forecast?
     private(set) var radarImage:NSUIImage?
     private let weatherUpdateTimeInMinutes:TimeInterval = 20
+    
+    private var delegateWarn:WeatherDelegate? {
+        if self.delegate == nil { Debugging.LogError(message: "WeatherController doesn't have a delegate.") }
+        return self.delegate
+    }
     
     enum JSONErrors : Error {
         case missingField(msg:String)
@@ -183,13 +188,13 @@ class WeatherController {
     
     func callWeatherError(error:NSError) {
         DispatchQueue.main.async {
-            self.delegate?.weatherError(error: error)
+            self.delegateWarn?.weatherError(self, error: error)
         }
     }
     
     func callWeatherDidChange() {
         DispatchQueue.main.async {
-            self.delegate?.weatherDidChange()
+            self.delegateWarn?.weatherDidChange(self)
         }
     }
 

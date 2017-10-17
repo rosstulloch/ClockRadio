@@ -73,7 +73,7 @@
 		407E20EE1DE0F5E90066F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		407E20F11DE0F5E90066F3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		407E20F31DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockRadioTerminalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ClockRadioTerminalTests; path = ../../../../../ClockRadioTerminalTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		407E20FC1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRadioTerminalTests.swift; sourceTree = "<group>"; };
 		407E20FE1DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407E21271DE0F71F0066F3F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */,
-				407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */,
+				407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			);
 			name = ClockRadioTerminalTests;
 			productName = ClockRadioTerminalTests;
-			productReference = 407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */;
+			productReference = 407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

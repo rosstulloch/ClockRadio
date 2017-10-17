@@ -8,4 +8,4 @@
 
 import Foundation
 
-let weatherUndergroundKey = "ffddc5589a1dfc7b"
+let weatherUndergroundKey = "XXXXXXXXXX"

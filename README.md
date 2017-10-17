@@ -1,6 +1,8 @@
 ClockRadio
 ====================
 
+![Alt text](Art/Weather.png)
+
 Features
 ---------------------
 
@@ -9,13 +11,15 @@ Control is are via three [Flic](http://flic.io) buttons.
 The time is shown, in large friendly digits. The time separators flash.
 Internet audio streams can be played, easily.
 
-The current weather and a weather forecast is shown during the day. In the morning a weather radar is shown.
+The current weather and a weather forecast is shown during the day. In the morning a weather radar is shown.  
 At night, just the current temperature is shown.
 
-iTunes album artwork is displayed from the iTunes store for the currently playing track.
+An alarm turns on the radio.
+
+iTunes album artwork is displayed from the iTunes store for the currently playing track.  
 This feature is only available for radio stations which embed metadata into their audio streams.
 
-An alarm turns on the radio.
+![Alt text](Art/AlbumSmallCorner.png)
 
 Features missing
 ---------------------

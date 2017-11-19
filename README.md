@@ -1,12 +1,12 @@
 ClockRadio
 ====================
 
-![Alt text](Art/Weather.png)
+![Alt text](Art/Clock Radio Small.png)
 
 Features
 ---------------------
 
-Control is are via three [Flic](http://flic.io) buttons.
+Control is via three [Flic](http://flic.io) buttons.
 
 The time is shown, in large friendly digits. The time separators flash.
 Internet audio streams can be played, easily.

@@ -1,7 +1,7 @@
 ClockRadio
 ====================
 
-![Alt text](Art/Clock Radio Small.png)
+![Alt text](Art/Clock%20Radio%20Small.png)
 
 Features
 ---------------------

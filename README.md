@@ -29,12 +29,13 @@ A preferences window.
 How to customise
 ---------------------
 
+The SketchUp model for my 3D printed Flic button holder is in the Art folder.
+
 All the preferences are currently set in code.
 General preferences are in `Preferences.swift`. Radio preferences are in `Stations.json`.
 
 **You will need a [wunderground.com](https://www.wunderground.com/weather/api) developer id to receive weather information.**  
 You will need to set this key in `WeatherUndergroundKey.swift`.
-
 
 Flic button instructions
 ---------------------

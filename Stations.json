@@ -2,7 +2,7 @@
   "stations": {
     "702": "http://www.abc.net.au/res/streaming/audio/aac/local_sydney.pls",
     "NOVA 969": "http://streaming.novaentertainment.com.au/nova969",
-    "RN": "http://www.abc.net.au/res/streaming/audio/aac/radio_national.pls",
+    "RN": "http://www.abc.net.au/res/streaming/audio/mp3/radio_national.pls",
     "NR": "http://www.abc.net.au/res/streaming/audio/aac/news_radio.pls",
     "CLASSIC FM": "http://www.abc.net.au/res/streaming/audio/aac/classic_fm.pls",
     "TRIPLE J": "http://www.abc.net.au/res/streaming/audio/aac/triplej.pls",

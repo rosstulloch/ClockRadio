@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 fileprivate enum SleepState:Int {
     case off, fifteenMinutes, thrityMinutes, fortyFiveMinutes, oneHour, oneAndAHalfHours
@@ -49,6 +50,7 @@ class SleepController
     var delegate:SleepControllerDelegate?
     private var state:SleepState = .off
     private var sleepTimer:Timer?
+    private var sleepPipsTimer:Timer?
     var currentStateDescription:String { return self.state.description }
     var willSleep:Bool { return self.sleepTimer != nil }
     
@@ -73,10 +75,16 @@ class SleepController
     private func cancelSleepTimer() {
         self.sleepTimer?.invalidate()
         self.sleepTimer = nil
+        self.self.sleepPipsTimer?.invalidate()
+        self.self.sleepPipsTimer = nil
     }
     
     private func recreateSleepTimer() {
         self.cancelSleepTimer()
+        
+        self.sleepPipsTimer = Timer.scheduledTimer(withTimeInterval: state.seconds - 7, repeats: false) { [weak self] timer in
+            self?.playPips()
+        }
         
         self.sleepTimer = Timer.scheduledTimer(withTimeInterval: state.seconds, repeats: false) { [weak self] timer in
             self?.sleepTimer = nil
@@ -91,6 +99,18 @@ class SleepController
         } else {
             recreateSleepTimer()
             delegate?.shouldBePlaying()
+        }
+    }
+    
+    private func playPips() {
+        let tink:SystemSoundID = 1057
+        
+        AudioServicesPlaySystemSound(tink)
+        GCDAdditions.perform(afterDelay: 0.5) {
+            AudioServicesPlaySystemSound(tink)
+            GCDAdditions.perform(afterDelay: 0.5) {
+                AudioServicesPlaySystemSound(tink)
+            }
         }
     }
 

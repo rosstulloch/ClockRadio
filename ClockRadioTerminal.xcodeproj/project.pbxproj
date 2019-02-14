@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		400BC1101F83672E008F82CC /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400BC10F1F83672E008F82CC /* Radio.swift */; };
-		400BC1121F8368AD008F82CC /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; };
 		400BC1131F8368B3008F82CC /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; };
 		400BC1141F8368B3008F82CC /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40668E781F8D729300FF1795 /* 21199__acclivity__morninghasbroken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */; };
@@ -72,7 +71,7 @@
 		407E20EE1DE0F5E90066F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		407E20F11DE0F5E90066F3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		407E20F31DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ClockRadioTerminalTests; path = ../../../../../ClockRadioTerminalTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockRadioTerminalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		407E20FC1DE0F5E90066F3F8 /* ClockRadioTerminalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRadioTerminalTests.swift; sourceTree = "<group>"; };
 		407E20FE1DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407E21271DE0F71F0066F3F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -99,7 +98,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				400BC1131F8368B3008F82CC /* fliclib.framework in Frameworks */,
-				400BC1121F8368AD008F82CC /* fliclib.framework in Frameworks */,
 				407E21281DE0F71F0066F3F8 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */,
-				407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */,
+				407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +241,7 @@
 			);
 			name = ClockRadioTerminalTests;
 			productName = ClockRadioTerminalTests;
-			productReference = 407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests */;
+			productReference = 407E20F81DE0F5E90066F3F8 /* ClockRadioTerminalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -253,17 +251,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ross Tulloch";
 				TargetAttributes = {
 					407E20E31DE0F5E90066F3F8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = ZR7LDMP3AD;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					407E20F71DE0F5E90066F3F8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = ZR7LDMP3AD;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 407E20E31DE0F5E90066F3F8;
 					};
@@ -387,6 +387,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -394,6 +395,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -445,6 +447,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -452,6 +455,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -499,7 +503,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -520,7 +525,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -534,7 +540,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockRadioTerminal.app/ClockRadioTerminal";
 			};
 			name = Debug;
@@ -549,7 +556,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeroonetwenty.ClockRadioTerminalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClockRadioTerminal.app/ClockRadioTerminal";
 			};
 			name = Release;

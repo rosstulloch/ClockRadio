@@ -85,8 +85,9 @@ fileprivate enum MyErrors : Int, ErrorsHelper {
         // Should we show the details of where the code failed in the source?
         if showSourceDetails {
             var fileName = (file as NSString).lastPathComponent
-            if fileName.hasSuffix(".swift") {
-                fileName = String(fileName.dropLast(".swift".characters.count))
+            let siwftExtensions = ".swift"
+            if fileName.hasSuffix(siwftExtensions) {
+                fileName = String(fileName.dropLast(siwftExtensions.count))
             }
             message += " [\(fileName):\(function):\(line)]"
         }

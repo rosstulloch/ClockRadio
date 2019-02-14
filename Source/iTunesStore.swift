@@ -159,7 +159,7 @@ struct iTunesStore
     private func fetchInterestingMetaData(_ md:[AVMetadataItem] ) -> InterestingAVMetaData {
         var result = InterestingAVMetaData()
         for metadata in md {
-            guard let commonKey = metadata.commonKey else {
+            guard let commonKey = convertFromOptionalAVMetadataKey(metadata.commonKey) else {
                 continue
             }
             switch commonKey {
@@ -230,4 +230,10 @@ struct iTunesStore
         }
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromOptionalAVMetadataKey(_ input: AVMetadataKey?) -> String? {
+	guard let input = input else { return nil }
+	return input.rawValue
 }

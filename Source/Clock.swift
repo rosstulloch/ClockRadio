@@ -63,9 +63,9 @@ struct TimeString
  
     func attributed(_ size:CGFloat, colonColor:NSUIColor ) -> NSAttributedString {
         let result = NSMutableAttributedString(string:self.time)
-        result.addAttribute(NSFontAttributeName, value:NSUIFont.systemFont(ofSize: size), range:NSMakeRange(0,result.length))
+        result.addAttribute(NSAttributedString.Key.font, value:NSUIFont.systemFont(ofSize: size), range:NSMakeRange(0,result.length))
         if let lengthToSeparator = lengthOfTimeStringToSeparator(self.time) {
-            result.addAttribute(NSForegroundColorAttributeName, value:colonColor, range:NSMakeRange(lengthToSeparator,1))
+            result.addAttribute(NSAttributedString.Key.foregroundColor, value:colonColor, range:NSMakeRange(lengthToSeparator,1))
         }
         return result
     }

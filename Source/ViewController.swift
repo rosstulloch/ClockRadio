@@ -196,10 +196,10 @@ extension ViewController : ClockControllerDelegate {
     }
     
     func animateTime() {
-        let raw = UIViewKeyframeAnimationOptions.repeat.rawValue |
-                  UIViewAnimationOptions.autoreverse.rawValue
+        let raw = UIView.KeyframeAnimationOptions.repeat.rawValue |
+                  UIView.AnimationOptions.autoreverse.rawValue
         
-        UIView.animateKeyframes(withDuration: 0.75, delay: 0, options: UIViewKeyframeAnimationOptions(rawValue: raw), animations: {
+        UIView.animateKeyframes(withDuration: 0.75, delay: 0, options: UIView.KeyframeAnimationOptions(rawValue: raw), animations: {
                 self.time.alpha = 0.0
                 self.timeBehind.alpha = 1.0
             }, completion:nil)

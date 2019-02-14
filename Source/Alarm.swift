@@ -6,6 +6,7 @@
 //  Copyright © 2017 Ross Tulloch. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 protocol AlarmControllerDelegate {
@@ -19,8 +20,16 @@ class AlarmController {
     init() {
         self.setupAlarm()
 
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil, queue: nil) { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: UIApplication.significantTimeChangeNotification, object: nil, queue: nil) { [weak self] notification in
             self?.setupAlarm()
+        }
+
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] notification in
+            self?.setupAlarm()
+        }
+
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] notification in
+            self?.alarm?.invalidate()
         }
     }
     

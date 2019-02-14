@@ -82,7 +82,8 @@ class SleepController
     private func recreateSleepTimer() {
         self.cancelSleepTimer()
         
-        self.sleepPipsTimer = Timer.scheduledTimer(withTimeInterval: state.seconds - 7, repeats: false) { [weak self] timer in
+        let pipsBeforeTime:Double = 30
+        self.sleepPipsTimer = Timer.scheduledTimer(withTimeInterval: state.seconds - pipsBeforeTime, repeats: false) { [weak self] timer in
             self?.playPips()
         }
         

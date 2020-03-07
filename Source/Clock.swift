@@ -58,7 +58,9 @@ struct TimeString
     
     private func lengthOfTimeStringToSeparator(_ string:String ) -> Int? {
         if let range = string.rangeOfCharacter(from: CharacterSet(charactersIn: ":-.")) {
-            return string.characters.distance(from: string.startIndex, to: range.lowerBound)
+            let subStr = string[string.startIndex..<range.lowerBound]
+            let result = subStr.count
+            return result
         }
         return nil
     }

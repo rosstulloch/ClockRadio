@@ -6,7 +6,7 @@ ClockRadio
 Features
 ---------------------
 
-Control is via three [Flic](http://flic.io) buttons.
+Control is via three [Flic](http://flic.io) buttons, or gestures: Swipe left/right to change stations. Swipe up to set sleep timer, swipe down to turn off.
 
 The time is shown, in large friendly digits. The time separators flash.
 Internet audio streams can be played, easily.

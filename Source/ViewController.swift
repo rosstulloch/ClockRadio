@@ -13,9 +13,7 @@ import fliclib
 
 
 class ViewController: UIViewController, UIApplicationDelegate {
-
-    @IBOutlet weak var status:UITextField?
-    @IBOutlet weak var timeAndDateContainer: UIView!
+    @IBOutlet weak var status:UITextField!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var timeBehind: UILabel!
     @IBOutlet weak var info: UILabel!
@@ -40,7 +38,6 @@ class ViewController: UIViewController, UIApplicationDelegate {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black
-        self.view.addSubview( self.timeAndDateContainer )
 
         self.radio.delegate = self
         self.alarm.delegate = self
@@ -75,14 +72,8 @@ class ViewController: UIViewController, UIApplicationDelegate {
         addSwipe( .down, action: #selector(middleHold(_:)))
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         animateTime()
-    }
-
-    override func viewDidLayoutSubviews() {
-        self.info.positionDownByThird()
-        layoutTimeSubviews()
     }
 
     @objc func flipBetweenWeatherAndAlbumDetails( timer:Timer ) {
@@ -99,7 +90,7 @@ class ViewController: UIViewController, UIApplicationDelegate {
 }
 
 
-// MARK: Buttons
+// MARK:- Buttons
 extension ViewController {
 
     @IBAction func leftClickOnce(_ sender: Any) {
@@ -137,7 +128,7 @@ extension ViewController {
 }
 
 
-// MARK: Radio
+// MARK:- Radio
 extension ViewController : RadioControllerDelegate {
 
     func startedPlayingStation() {
@@ -230,14 +221,6 @@ extension ViewController : ClockControllerDelegate {
                 self.time.alpha = 0.0
                 self.timeBehind.alpha = 1.0
             }, completion:nil)
-    }
-
-    func layoutTimeSubviews() {
-        let rootViewFrame = self.view!.frame
-        
-        timeAndDateContainer.setWidth( rootViewFrame.width )
-        timeAndDateContainer.positionDownByThird()
-        info.positionHorizontallyCentered()
     }
     
 }

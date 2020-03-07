@@ -21,8 +21,8 @@ class ViewController: UIViewController, UIApplicationDelegate {
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var bottomRightImage: UIImageView!
     @IBOutlet weak var bottomRightLabel: UILabel!
-    @IBOutlet weak var debugButtonsContainer: UIStackView!
-    
+    @IBOutlet weak var belowText: UILabel!
+
     var albumImage:UIImage? = nil
     var albumText:String? = nil
     var lastTimeString = ""
@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIApplicationDelegate {
 	let clock = ClockController()
     let radio = RadioController()
     let sleep = SleepController()
-    let weather = WeatherController()
+    var weather = Preferences.weatherProvider
     let alarm = AlarmController()
 
     var watchingForAlarmPlayStationError = false
@@ -39,17 +39,16 @@ class ViewController: UIViewController, UIApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view!.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor.black
         self.view.addSubview( self.timeAndDateContainer )
 
         self.radio.delegate = self
         self.alarm.delegate = self
         self.sleep.delegate = self
         self.clock.delegate = self
-        
+        self.clock.alarm = self.alarm
         
         self.weather.delegate = self
-        self.weather.checkWeatherRegularly()
     
         Timer.scheduledTimer(timeInterval:60.0, target: self, selector:#selector(ViewController.flipBetweenWeatherAndAlbumDetails(timer:)),
                              userInfo: nil, repeats: true).tolerance = 1.0
@@ -57,9 +56,25 @@ class ViewController: UIViewController, UIApplicationDelegate {
     #if IOS_SIMULATOR
     #else
         setupFlic()
-        self.debugButtonsContainer.isHidden = true
     #endif
+        
+        addGestures()
     }
+    
+    private func addGestures() {
+
+        func addSwipe(_ direction:UISwipeGestureRecognizer.Direction, action: Selector ) {
+            let swipe = UISwipeGestureRecognizer(target: self, action: action)
+            swipe.direction = direction
+            self.view.addGestureRecognizer(swipe)
+        }
+
+        addSwipe( .right, action: #selector(rightClickOnce(_:)))
+        addSwipe( .left, action: #selector(leftClickOnce(_:)))
+        addSwipe( .up, action: #selector(middleOnce(_:)))
+        addSwipe( .down, action: #selector(middleHold(_:)))
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         animateTime()
@@ -78,24 +93,29 @@ class ViewController: UIViewController, UIApplicationDelegate {
         self.bottomRightImage.image = self.albumImage
         
         GCDAdditions.perform(afterDelay:30.0) {
-            self.weatherDidChange(self.weather)
+            self.weatherDidChange()
         }
     }
 }
+
 
 // MARK: Buttons
 extension ViewController {
 
     @IBAction func leftClickOnce(_ sender: Any) {
+        self.radio.playNextStation()
+    }
+
+    @IBAction func leftClickDouble(_ sender: Any) {
         self.radio.playLeftButtonStation()
     }
 
     @IBAction func rightClickOnce(_ sender: Any) {
-        self.radio.playRightButtonStation()
+        self.radio.playPreviousStation()
     }
 
     @IBAction func rightClickDouble(_ sender: Any) {
-        self.radio.playNextStation()
+        self.radio.playRightButtonStation()
     }
 
     @IBAction func middleOnce(_ sender: Any) {
@@ -135,8 +155,15 @@ extension ViewController : RadioControllerDelegate {
         self.albumText = nil
     }
     
-    func showStationName( text:String ) {
+    func showStationName( text:String, positionInfoString:String? )  {
         self.showBigInfo(text: text)
+        
+        if let positionInfoString = positionInfoString {
+            self.belowText.text = positionInfoString
+            GCDAdditions.cancelPreviousThenPerform(afterDelay: 5.0) {
+                self.belowText.text = ""
+            }
+        }
     }
 
     func showBigInfo( text:String ) {
@@ -267,119 +294,32 @@ extension ViewController : WeatherDelegate {
         return false
     }
 
-    func weatherDidChange(_ wc:WeatherController) {
+    func weatherDidChange() {
 
-        if self.isNight {
-            // Just show temp...
-            if let tempC = self.weather.current?.currentC {
-                self.bottomRightLabel.text = String(describing: tempC) + "c"
-            }
+        if self.isNight == true {
+            self.bottomRightLabel.text = self.weather.temperature
         } else {
-            // Show long description....
-            self.bottomRightLabel.text = self.weather.description
+            self.bottomRightLabel.text = self.weather.fullWeather
         }
         
+    #if IOS_SIMULATOR
+        self.bottomRightImage.image = self.weather.weatherImage
+    #else
         if self.isWakeUpTime {
             // Show radar in the morning...
-            self.bottomRightImage.image = self.weather.radarImage
+            self.bottomRightImage.image = self.weather.weatherImage
         } else {
             self.bottomRightImage.image = nil
         }
+    #endif
     }
     
-    func weatherError(_ wc:WeatherController, error: NSError) {
-   //     ShowErrorAlert(error)
-        // Showing errors via an alert is a poor idea since it will block the hide UI til dismissed.
-        // Just log the errors.
+    func weatherError(error: NSError) {
+        #if IOS_SIMULATOR
+            ShowErrorAlert(error)
+        #endif
         Debugging.LogError(error)
     }
 
 }
-
-// MARK:- Flic
-#if IOS_SIMULATOR
-#else
-extension ViewController : SCLFlicManagerDelegate, SCLFlicButtonDelegate {
-
-    fileprivate enum FlicErrors : Int, ErrorsHelper {
-        var domain:String { return "Flic" }
-        var code:Int { return self.rawValue }
-        case unknownButtonName
-        var description:String {
-            switch(self) {
-                case .unknownButtonName: return "Unknown button name:"
-            }
-        }
-        var suggestion: String? {
-            return "Valid button names are: left, middle and right. They're case insensitive."
-        }
-    }
-
-    enum FlicAction {
-        case click, doubleClick, hold
-    }
-
-    func setupFlic() {
-        SCLFlicManager.configure(with: self, defaultButtonDelegate: self, appID:"0d386b2b-ad9c-4d6f-ae88-781741e2edce", appSecret:"2435924c-b8b0-4e71-9589-b9ff083893b5", backgroundExecution: false)
-    }
-    
-    func handlePress( ofButton button: SCLFlicButton, action:FlicAction ) {
-    
-        switch button.userAssignedName.lowercased() {
-            case "left":
-                switch action {
-                    case .click: self.leftClickOnce(self)
-                    case .doubleClick: break
-                    case .hold: break
-                }
-            case "middle":
-                switch action {
-                    case .click: self.middleOnce(self)
-                    case .doubleClick: break
-                    case .hold: self.middleHold(self)
-                }
-            case "right":
-                switch action {
-                    case .click: self.rightClickOnce(self)
-                    case .doubleClick: self.rightClickDouble(self)
-                    case .hold: break
-                }
-            default:
-                ShowErrorAlert(FlicErrors.unknownButtonName.nserror(), extraMessage: "\(button.userAssignedName).")
-        }
-    }
-
-    @IBAction public func grabFlicAction(_ sender: AnyObject? ) {
-        SCLFlicManager.shared()?.grabFlicFromFlicApp(withCallbackUrlScheme: "rcr")
-    }
-    
-    func flicManager(_ manager: SCLFlicManager, didGrab button: SCLFlicButton?, withError error: Error?) {
-    }
-    
-    func flicButton(_ button: SCLFlicButton, didReceiveButtonClick queued: Bool, age: Int) {
-        button.triggerBehavior = .clickAndDoubleClickAndHold // Must be a better place to set this?
-        guard queued == false else {
-            return
-        }
-        handlePress( ofButton:button, action:.click )
-    }
-
-    func flicButton(_ button: SCLFlicButton, didReceiveButtonDoubleClick queued: Bool, age: Int) {
-        guard queued == false else {
-            return
-        }
-        handlePress( ofButton:button, action:.doubleClick )
-    }
-
-    func flicButton(_ button: SCLFlicButton, didReceiveButtonHold queued: Bool, age: Int) {
-        guard queued == false else {
-            return
-        }
-        handlePress( ofButton:button, action:.hold )
-    }
-}
-#endif
-
-
-
 

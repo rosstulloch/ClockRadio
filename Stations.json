@@ -1,12 +1,14 @@
 {
   "stations": {
-    "702": "http://www.abc.net.au/res/streaming/audio/aac/local_sydney.pls",
-    "NOVA 969": "http://streaming.novaentertainment.com.au/nova969",
-    "RN": "http://www.abc.net.au/res/streaming/audio/mp3/radio_national.pls",
-    "NR": "http://www.abc.net.au/res/streaming/audio/aac/news_radio.pls",
+    "ABC 702": "http://www.abc.net.au/res/streaming/audio/aac/local_sydney.pls",
+    "ABC RN": "http://www.abc.net.au/res/streaming/audio/mp3/radio_national.pls",
+    "ABC NEWS": "http://www.abc.net.au/res/streaming/audio/aac/news_radio.pls",
     "CLASSIC FM": "http://www.abc.net.au/res/streaming/audio/aac/classic_fm.pls",
     "TRIPLE J": "http://www.abc.net.au/res/streaming/audio/aac/triplej.pls",
-    "KIIS": "http://icecast.arn.com.au/1065.mp3"
+    "BBC WS":"http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk",
+    "BBC R5":"http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5live_mf_p",
+    "NOVA 969": "http://streaming.novaentertainment.com.au/nova969",
+    "FOLK":"http://rfcmedia.streamguys1.com/Newport.mp3"
   },
   "alarmStation":"RN",
   "rightButtonStation":"NR",

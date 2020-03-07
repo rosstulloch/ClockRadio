@@ -21,10 +21,12 @@ protocol ClockControllerDelegate {
 class ClockController {
     var delegate:ClockControllerDelegate?
     private var everySecondTimer:Timer?
+    public var alarm:AlarmController? = nil
     
     init() {
         self.everySecondTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             self?.delegate?.clockTick()
+            self?.alarm?.clockTick()
         }
         self.everySecondTimer?.tolerance = 0.5
     }

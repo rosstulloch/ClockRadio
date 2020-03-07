@@ -10,8 +10,13 @@
 		400BC1101F83672E008F82CC /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400BC10F1F83672E008F82CC /* Radio.swift */; };
 		400BC1131F8368B3008F82CC /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; };
 		400BC1141F8368B3008F82CC /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 400BC1111F8368AD008F82CC /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4030A688241313E600E6CA7A /* AusBureauOfMeteorology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */; };
+		4030A68A2413153200E6CA7A /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A6892413153200E6CA7A /* WeatherProvider.swift */; };
+		4030A68C24131BD500E6CA7A /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A68B24131BD500E6CA7A /* CommonExtensions.swift */; };
+		4030A68F24132C6E00E6CA7A /* OpenWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A68E24132C6E00E6CA7A /* OpenWeather.swift */; };
+		4030A6912413381500E6CA7A /* OpenWeatherAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A6902413381500E6CA7A /* OpenWeatherAPIKey.swift */; };
+		4030A69324135E2600E6CA7A /* ViewControllerFlicSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030A69224135E2500E6CA7A /* ViewControllerFlicSupport.swift */; };
 		40668E781F8D729300FF1795 /* 21199__acclivity__morninghasbroken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */; };
-		40668E7A1F901EAF00FF1795 /* WeatherUndergroundKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */; };
 		407E20E81DE0F5E90066F3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */; };
 		407E20EA1DE0F5E90066F3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E20E91DE0F5E90066F3F8 /* ViewController.swift */; };
 		407E20ED1DE0F5E90066F3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407E20EB1DE0F5E90066F3F8 /* Main.storyboard */; };
@@ -26,7 +31,6 @@
 		407E562E1F835E5B00CB00CC /* GCDAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E562D1F835E5B00CB00CC /* GCDAdditions.swift */; };
 		407F3D771F8731FF002F3749 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407F3D761F8731FF002F3749 /* Preferences.swift */; };
 		40B478211EA985BB000C8C08 /* Typed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21411DE636C30066F3F8 /* Typed.swift */; };
-		40B4782A1EA9E7C5000C8C08 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B478291EA9E7C5000C8C08 /* Weather.swift */; };
 		40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21301DE39C660066F3F8 /* ViewAdditions.swift */; };
 		40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */; };
 		40B788571F84CB7300A9D835 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 40B788561F84CB7300A9D835 /* Stations.json */; };
@@ -62,8 +66,13 @@
 		400BC10F1F83672E008F82CC /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Radio.swift; path = Source/Radio.swift; sourceTree = "<group>"; };
 		400BC1111F8368AD008F82CC /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
 		400BC1171F847561008F82CC /* Clippings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clippings; sourceTree = "<group>"; };
+		4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AusBureauOfMeteorology.swift; sourceTree = "<group>"; };
+		4030A6892413153200E6CA7A /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
+		4030A68B24131BD500E6CA7A /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		4030A68E24132C6E00E6CA7A /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeather.swift; sourceTree = "<group>"; };
+		4030A6902413381500E6CA7A /* OpenWeatherAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPIKey.swift; sourceTree = "<group>"; };
+		4030A69224135E2500E6CA7A /* ViewControllerFlicSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFlicSupport.swift; sourceTree = "<group>"; };
 		40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 21199__acclivity__morninghasbroken.mp3; path = Resources/21199__acclivity__morninghasbroken.mp3; sourceTree = "<group>"; };
-		40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUndergroundKey.swift; sourceTree = "<group>"; };
 		407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockRadioTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
 		407E20E91DE0F5E90066F3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Source/ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +94,6 @@
 		407E562D1F835E5B00CB00CC /* GCDAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GCDAdditions.swift; path = Source/GCDAdditions.swift; sourceTree = "<group>"; };
 		407F3D761F8731FF002F3749 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		40B3B9C61E1BA36D001C6306 /* To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
-		40B478291EA9E7C5000C8C08 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = Source/Weather.swift; sourceTree = "<group>"; };
 		40B788561F84CB7300A9D835 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		40B7885A1F858C4100A9D835 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Defaults.plist; path = Resources/Defaults.plist; sourceTree = "<group>"; };
 		40B7885C1F85A23E00A9D835 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = Source/Alarm.swift; sourceTree = "<group>"; };
@@ -112,10 +120,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4030A68D24131BEA00E6CA7A /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				4030A6892413153200E6CA7A /* WeatherProvider.swift */,
+				4030A68E24132C6E00E6CA7A /* OpenWeather.swift */,
+				4030A6902413381500E6CA7A /* OpenWeatherAPIKey.swift */,
+				4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
 		405928471E25FED3003961CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				407E562D1F835E5B00CB00CC /* GCDAdditions.swift */,
+				4030A68B24131BD500E6CA7A /* CommonExtensions.swift */,
 				407E21301DE39C660066F3F8 /* ViewAdditions.swift */,
 				407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */,
 				407E21411DE636C30066F3F8 /* Typed.swift */,
@@ -131,7 +151,6 @@
 				40B3B9C61E1BA36D001C6306 /* To Do */,
 				400BC1171F847561008F82CC /* Clippings */,
 				407F3D761F8731FF002F3749 /* Preferences.swift */,
-				40668E791F901EAF00FF1795 /* WeatherUndergroundKey.swift */,
 				40B788561F84CB7300A9D835 /* Stations.json */,
 				407E20E61DE0F5E90066F3F8 /* ClockRadioTerminal */,
 				407E20FB1DE0F5E90066F3F8 /* ClockRadioTerminalTests */,
@@ -154,6 +173,7 @@
 			children = (
 				407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */,
 				407E20E91DE0F5E90066F3F8 /* ViewController.swift */,
+				4030A69224135E2500E6CA7A /* ViewControllerFlicSupport.swift */,
 				407E21381DE4397E0066F3F8 /* Model */,
 				405928471E25FED3003961CC /* Utils */,
 				407E56301F83621F00CB00CC /* Resources */,
@@ -183,11 +203,11 @@
 			isa = PBXGroup;
 			children = (
 				407E21391DE634310066F3F8 /* iTunesStore.swift */,
-				40B478291EA9E7C5000C8C08 /* Weather.swift */,
 				400BC10F1F83672E008F82CC /* Radio.swift */,
 				40B7885C1F85A23E00A9D835 /* Alarm.swift */,
 				407E212C1DE39A500066F3F8 /* Clock.swift */,
 				407E21361DE439780066F3F8 /* Sleep.swift */,
+				4030A68D24131BEA00E6CA7A /* Weather */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,6 +294,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -321,16 +342,20 @@
 				407F3D771F8731FF002F3749 /* Preferences.swift in Sources */,
 				40B7885D1F85A23E00A9D835 /* Alarm.swift in Sources */,
 				407E21441DE636DA0066F3F8 /* DebuggingAdditions.swift in Sources */,
+				4030A68A2413153200E6CA7A /* WeatherProvider.swift in Sources */,
 				400BC1101F83672E008F82CC /* Radio.swift in Sources */,
-				40B4782A1EA9E7C5000C8C08 /* Weather.swift in Sources */,
+				4030A6912413381500E6CA7A /* OpenWeatherAPIKey.swift in Sources */,
 				40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */,
 				407E20EA1DE0F5E90066F3F8 /* ViewController.swift in Sources */,
+				4030A69324135E2600E6CA7A /* ViewControllerFlicSupport.swift in Sources */,
 				40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */,
 				407E212D1DE39A500066F3F8 /* Clock.swift in Sources */,
+				4030A68F24132C6E00E6CA7A /* OpenWeather.swift in Sources */,
 				407E20E81DE0F5E90066F3F8 /* AppDelegate.swift in Sources */,
 				407E21371DE439780066F3F8 /* Sleep.swift in Sources */,
 				407E213A1DE634310066F3F8 /* iTunesStore.swift in Sources */,
-				40668E7A1F901EAF00FF1795 /* WeatherUndergroundKey.swift in Sources */,
+				4030A68C24131BD500E6CA7A /* CommonExtensions.swift in Sources */,
+				4030A688241313E600E6CA7A /* AusBureauOfMeteorology.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

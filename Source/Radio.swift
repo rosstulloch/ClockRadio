@@ -18,6 +18,7 @@ fileprivate struct RadioJSON : Decodable {
 }
 
 struct RadioStation {
+    let key:String
     let url:URL
     let displayName:String
     
@@ -58,7 +59,7 @@ fileprivate enum RadioErrors : Int, ErrorsHelper {
 protocol RadioControllerDelegate {
     func startedPlayingStation()
     func stoppedPlayingStation()
-    func showStationName(text:String )
+    func showStationName(text:String, positionInfoString:String? )
     func showStationConnectionStatus(text:String )
     func handleiTunesRecordForCurrentTrack( _ itr:iTunesStoreRecord )
     func couldntConnectToStation()
@@ -70,6 +71,7 @@ class RadioController : NSObject {
     private var jsonPrefs:RadioJSON?
     private var cannotConnectStation:RadioStation?
     private var allStations = [String:RadioStation]()
+    private var stationPositionStrings = [String:String]()
 
     private (set) var state:RadioState = .off
     private var audioPlayer:AVPlayer?
@@ -91,7 +93,7 @@ class RadioController : NSObject {
         do {
             // Setup a 'station' to play if the network is missing. For the alarm.
             if let backupStationPath = Bundle.main.url(forResource:"21199__acclivity__morninghasbroken", withExtension:"mp3") {
-                self.cannotConnectStation = RadioStation(url: backupStationPath, displayName: "Morning!")
+                self.cannotConnectStation = RadioStation(key: "", url: backupStationPath, displayName: "Morning!")
             } else {
                 throw RadioErrors.backupStationIsMissing.nserror()
             }
@@ -104,17 +106,40 @@ class RadioController : NSObject {
             // cycleStationKeys will contain a list of all the stations to toggle over.
             // To build it we sort all the statiosn keys/names then remove the left and right button stations from the list..
             self.cycleStationKeys = self.allStations.keys.sorted()
-            if let index = self.cycleStationKeys.index(of: prefs.leftButtonStation) {
-                self.cycleStationKeys.remove(at:index)
-            }
-            if let index = self.cycleStationKeys.index(of: prefs.rightButtonStation) {
-                self.cycleStationKeys.remove(at: index)
-            }
             self.lastStation = self.allStations[prefs.defaultStation]
+            
+            self.prepareStationPositionStrings()
         
         } catch ( let error as NSError ) {
             ShowErrorAlert(error)
         }
+    }
+    
+    private func prepareStationPositionStrings() {
+    
+        for i in 0..<cycleStationKeys.count {
+            
+            let lastStation:String
+            if self.cycleStationKeys.indices.contains(i-1) {
+                lastStation = self.allStations[self.cycleStationKeys[i-1]]!.displayName
+            } else {
+                lastStation = self.allStations[self.cycleStationKeys.last!]!.displayName
+            }
+
+            let nextName:String
+            if self.cycleStationKeys.indices.contains(i+1) {
+                nextName = self.allStations[self.cycleStationKeys[i+1]]!.displayName
+            } else {
+                nextName = self.allStations[self.cycleStationKeys[0]]!.displayName
+            }
+            
+            let currentName = self.allStations[self.cycleStationKeys[i]]!.displayName
+            
+            let result = "\(lastStation) • \(currentName) • \(nextName)"
+            self.stationPositionStrings[cycleStationKeys[i]] = result
+        }
+        
+        print("\(self.stationPositionStrings)")
     }
     
     private func loadJSON() throws {
@@ -137,7 +162,7 @@ class RadioController : NSObject {
 
         // Load stations....
         for (key,value) in prefs.stations {
-            self.allStations[key] = RadioStation(url:URL(string: value)!,displayName: key)
+            self.allStations[key] = RadioStation(key: key, url:URL(string: value)!,displayName: key)
         }
     }
 
@@ -156,13 +181,25 @@ class RadioController : NSObject {
     }
     
     func playNextStation() {
+        nextCycleIndex += 1
+
         // Valid Index?
         if self.cycleStationKeys.indices.contains(nextCycleIndex) == false {
             nextCycleIndex = 0
         }
         
         self.play(station:self.allStations[cycleStationKeys[nextCycleIndex]])
-        nextCycleIndex += 1
+    }
+    
+    func playPreviousStation() {
+        nextCycleIndex -= 1
+
+        // Valid Index?
+        if self.cycleStationKeys.indices.contains(nextCycleIndex) == false {
+            nextCycleIndex = self.cycleStationKeys.count - 1
+        }
+        
+        self.play(station:self.allStations[cycleStationKeys[nextCycleIndex]])
     }
     
     func playLastStation() {
@@ -189,13 +226,13 @@ class RadioController : NSObject {
         
         if let lastStation = self.lastStation, station == lastStation, self.isPlayingOrConnecting {
             // Station is already playing!
-            self.delegate?.showStationName(text: station.displayName )
+            self.delegate?.showStationName(text: station.displayName, positionInfoString: self.stationPositionStrings[station.key] )
             return
         }
         
         self.stopPlaying()
         self.lastStation = station
-        self.delegate?.showStationName(text: station.displayName )
+        self.delegate?.showStationName(text: station.displayName, positionInfoString: self.stationPositionStrings[station.key] )
         
         self.audioPlayer = AVPlayer(url:station.url)
         if self.audioPlayer == nil {

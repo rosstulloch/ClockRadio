@@ -19,8 +19,8 @@ struct Preferences {
     static let morning = (6...9)
     
     static var weatherProvider:WeatherProvider {
-        AusBureauOfMeteorology()
+       // AusBureauOfMeteorology()
         /* or */
-        //OpenWeather(city: "Sydney,au", apiKey: OpenWeatherAPIKey)
+        OpenWeather(city: "Sydney,au", apiKey: OpenWeatherAPIKey)
     }
 }

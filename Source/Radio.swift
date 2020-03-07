@@ -282,6 +282,8 @@ class RadioController : NSObject {
                 break;
             case .unknown:
                 break
+            @unknown default:
+                break
         }
         
         didChange()

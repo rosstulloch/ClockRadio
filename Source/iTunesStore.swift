@@ -9,11 +9,15 @@
 import Foundation
 import AVFoundation
 
-struct iTunesStoreRecord {
+struct iTunesStoreResults  : Codable {
+    let resultCount:Int
+    let results:[iTunesStoreRecord]
+}
 
+struct iTunesStoreRecord : Codable {
     let artistName:String
     let kind:String
-    let artistViewUrl:String
+    let artistViewUrl:String?
     let trackViewUrl:String
     let artworkUrl100:String
     let trackCensoredName:String
@@ -32,19 +36,6 @@ struct iTunesStoreRecord {
         }
     }
 
-    init(_ record:AnyObject ) throws {
-        guard let target = record as? NSObject else {
-            throw iTunesRecordError.wrongType.nserror()
-        }
-        
-        self.artistName = try Typed.stringForKeyPath( "artistName", from:target )
-        self.kind = try Typed.stringForKeyPath( "kind", from:target )
-        self.trackViewUrl = try Typed.stringForKeyPath( "trackViewUrl", from:target )
-        self.artworkUrl100 = try Typed.stringForKeyPath( "artworkUrl100", from:target )
-        self.artistViewUrl = try Typed.stringForKeyPath( "artistViewUrl", from:target )
-        self.trackCensoredName = try Typed.stringForKeyPath( "trackCensoredName", from:target )
-    }
-    
     func fetchArtwork( _ completion:@escaping (_ artwork100:NSUIImage?,_ error:NSError?)->Void ) {
         guard let artUrl = URL(string: artworkUrl100) else {
             completion( nil, iTunesRecordError.artworkUrlIsInvalid.nserror() )
@@ -119,12 +110,15 @@ struct iTunesStore
             guard let data = data else {
                 return
             }
-          //  if let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
-          //     NSLog("%@", result)
-          //  }
 
-            let records = self.parseSearchResults(data)
-            completion(records)
+            var results = [iTunesStoreRecord]()
+            do {
+                results = try JSONDecoder().decode(iTunesStoreResults.self, from: data).results
+                completion(results)
+            } catch ( let error as NSError ) {
+                Debugging.LogError( error)
+            }
+
         }
         task.resume()
     }
@@ -138,24 +132,6 @@ struct iTunesStore
         }
     }
 
-    private func parseSearchResults(_ jsonData:Data ) -> [iTunesStoreRecord] {
-        var results = [iTunesStoreRecord]()
-        do {
-            guard let resultsJSON = try JSONSerialization.jsonObject( with: jsonData, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? [String:Any] else {
-                return [iTunesStoreRecord]()
-            }
-            guard let recordResults = resultsJSON["results"] as? [AnyObject] else {
-                return [iTunesStoreRecord]()
-            }
-            for record in recordResults {
-                results.append(try iTunesStoreRecord(record))
-            }
-        } catch ( let error as NSError ) {
-            Debugging.LogError( error)
-        }
-        return results
-    }
-    
     private func fetchInterestingMetaData(_ md:[AVMetadataItem] ) -> InterestingAVMetaData {
         var result = InterestingAVMetaData()
         for metadata in md {

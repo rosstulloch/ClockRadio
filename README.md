@@ -50,7 +50,7 @@ The first time you start the app you need to 'grab' each Flic button. To do this
 Use the left and right buttons to move between stations. 
 
 Pressing the centre button turns on the radio and steps over each available sleep time.  
-Holding down the centre button turns OFF the radio.
+Holding down the centre button turns off the radio.
 
 License
 -------
@@ -60,7 +60,7 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Licens
 Acknowledgements  
 ---------------------
 
-[OpenWeather](https://openweathermap.org) and [Australia Bureau of Meteorology](https://openweathermap.org) is used for weather. 
+[OpenWeather](https://openweathermap.org) and [Australia Bureau of Meteorology](https://openweathermap.org) are used for weather. 
 
 MorningHasBroken.mp3 by acclivity is used for the alarm when a network isn't available.  
 [https://freesound.org/people/acclivity/sounds/21199/#](https://freesound.org/people/acclivity/sounds/21199/#)  

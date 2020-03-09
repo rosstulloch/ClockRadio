@@ -64,7 +64,6 @@
 /* Begin PBXFileReference section */
 		400BC10F1F83672E008F82CC /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Radio.swift; path = Source/Radio.swift; sourceTree = "<group>"; };
 		400BC1111F8368AD008F82CC /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
-		400BC1171F847561008F82CC /* Clippings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clippings; sourceTree = "<group>"; };
 		4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AusBureauOfMeteorology.swift; sourceTree = "<group>"; };
 		4030A6892413153200E6CA7A /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
 		4030A68B24131BD500E6CA7A /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
@@ -146,7 +145,6 @@
 			children = (
 				40EE2D381F95AB7C000A4194 /* README.md */,
 				40B3B9C61E1BA36D001C6306 /* To Do */,
-				400BC1171F847561008F82CC /* Clippings */,
 				407F3D761F8731FF002F3749 /* Preferences.swift */,
 				40B788561F84CB7300A9D835 /* Stations.json */,
 				407E20E61DE0F5E90066F3F8 /* ClockRadioTerminal */,

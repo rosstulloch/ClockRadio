@@ -64,9 +64,7 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Licens
 Acknowledgements  
 ---------------------
 
-Wunderground.com is used for weather data.  
-<img src="https://www.wunderground.com/logos/images/wundergroundLogo_4c_horz.jpg" width="365" height="50">  
-    <br />
+[OpenWeather](https://openweathermap.org)
 MorningHasBroken.mp3 by acclivity is used for the alarm when a network isn't available.  
 [https://freesound.org/people/acclivity/sounds/21199/#](https://freesound.org/people/acclivity/sounds/21199/#)  
 It is licensed under the Attribution Noncommercial License:  

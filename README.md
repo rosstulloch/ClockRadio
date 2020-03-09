@@ -29,9 +29,11 @@ A preferences window.
 How to customise
 ---------------------
 
+![Alt text](Art/ScreenShotWeather.png)
+
 The SketchUp model for my 3D printed Flic button holder is in the Art folder.
 
-All the preferences are currently set in code.
+All preferences are currently set in code.
 General preferences are in `Preferences.swift`. Radio preferences are in `Stations.json`.
 
 **You will need a [OpenWeather](https://openweathermap.org) API key to receive weather information.**  
@@ -40,21 +42,15 @@ You will need to set this key in `OpenWeatherAPIKey.swift`.
 Flic button instructions
 ---------------------
 
-Assume the buttons are arranged in a row in front of the phone, like this: [X X X]  
+Assume the buttons are arranged in a row in front of the phone, like so: [X X X]  
+
 Buttons are identified by the app by name. The buttons need to be named: "left", "middle" and "right". Case doesn't matter.  
 The first time you start the app you need to 'grab' each Flic button. To do this click the hamburger ("&#x11054;") symbol in the top left of the app. Repeat this for each of the three buttons.
 
+Use the left and right buttons to move between stations. 
 
-Pressing the left button plays the left preset radio station.  
-Pressing the right button plays the right preset radio station.
-
-Double pressing the right button cycles over all the other available radio stations.
-
-Pressing the centre button turns on the radio (if not already on, to the last station) and steps over each available sleep time.  
+Pressing the centre button turns on the radio and steps over each available sleep time.  
 Holding down the centre button turns OFF the radio.
-
-If the radio is turned on using the left or right buttons and a sleep time isn't chosen, the radio with turn off after 90 minutes.  
-(This is to preserve battery life since my phone is plugged into a wall timer so it doesn't charge all the time).
 
 License
 -------
@@ -64,7 +60,7 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Licens
 Acknowledgements  
 ---------------------
 
-[OpenWeather](https://openweathermap.org)
+[OpenWeather](https://openweathermap.org) and [Australia Bureau of Meteorology](https://openweathermap.org) is used for weather. 
 
 MorningHasBroken.mp3 by acclivity is used for the alarm when a network isn't available.  
 [https://freesound.org/people/acclivity/sounds/21199/#](https://freesound.org/people/acclivity/sounds/21199/#)  

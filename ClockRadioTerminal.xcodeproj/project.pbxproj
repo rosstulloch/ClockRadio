@@ -29,11 +29,11 @@
 		407E21441DE636DA0066F3F8 /* DebuggingAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */; };
 		407E562E1F835E5B00CB00CC /* GCDAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E562D1F835E5B00CB00CC /* GCDAdditions.swift */; };
 		407F3D771F8731FF002F3749 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407F3D761F8731FF002F3749 /* Preferences.swift */; };
-		40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21301DE39C660066F3F8 /* ViewAdditions.swift */; };
 		40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */; };
 		40B788571F84CB7300A9D835 /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 40B788561F84CB7300A9D835 /* Stations.json */; };
 		40B7885B1F858C4100A9D835 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40B7885A1F858C4100A9D835 /* Defaults.plist */; };
 		40B7885D1F85A23E00A9D835 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B7885C1F85A23E00A9D835 /* Alarm.swift */; };
+		40C8C7B62415DC0000599B2F /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C8C7B52415DC0000599B2F /* CommonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,6 @@
 		407E20FE1DE0F5E90066F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407E21271DE0F71F0066F3F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		407E212C1DE39A500066F3F8 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = Source/Clock.swift; sourceTree = "<group>"; };
-		407E21301DE39C660066F3F8 /* ViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewAdditions.swift; path = Source/ViewAdditions.swift; sourceTree = "<group>"; };
 		407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUIPortable.swift; path = Source/NSUIPortable.swift; sourceTree = "<group>"; };
 		407E21361DE439780066F3F8 /* Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sleep.swift; path = Source/Sleep.swift; sourceTree = "<group>"; };
 		407E21391DE634310066F3F8 /* iTunesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesStore.swift; path = Source/iTunesStore.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		40B788561F84CB7300A9D835 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		40B7885A1F858C4100A9D835 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Defaults.plist; path = Resources/Defaults.plist; sourceTree = "<group>"; };
 		40B7885C1F85A23E00A9D835 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = Source/Alarm.swift; sourceTree = "<group>"; };
+		40C8C7B52415DC0000599B2F /* CommonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonExtensions.swift; path = Source/CommonExtensions.swift; sourceTree = "<group>"; };
 		40EE2D381F95AB7C000A4194 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +129,8 @@
 		405928471E25FED3003961CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				40C8C7B52415DC0000599B2F /* CommonExtensions.swift */,
 				407E562D1F835E5B00CB00CC /* GCDAdditions.swift */,
-				407E21301DE39C660066F3F8 /* ViewAdditions.swift */,
 				407E21341DE39DEF0066F3F8 /* NSUIPortable.swift */,
 				407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */,
 			);
@@ -338,11 +338,11 @@
 				40B788551F84B37D00A9D835 /* NSUIPortable.swift in Sources */,
 				407E20EA1DE0F5E90066F3F8 /* ViewController.swift in Sources */,
 				4030A69324135E2600E6CA7A /* ViewControllerFlicSupport.swift in Sources */,
-				40B788531F84AC1400A9D835 /* ViewAdditions.swift in Sources */,
 				407E212D1DE39A500066F3F8 /* Clock.swift in Sources */,
 				4030A68F24132C6E00E6CA7A /* OpenWeather.swift in Sources */,
 				407E20E81DE0F5E90066F3F8 /* AppDelegate.swift in Sources */,
 				407E21371DE439780066F3F8 /* Sleep.swift in Sources */,
+				40C8C7B62415DC0000599B2F /* CommonExtensions.swift in Sources */,
 				407E213A1DE634310066F3F8 /* iTunesStore.swift in Sources */,
 				4030A688241313E600E6CA7A /* AusBureauOfMeteorology.swift in Sources */,
 			);

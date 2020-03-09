@@ -19,8 +19,14 @@ struct Preferences {
     static let morning = (6...9)
     
     static var weatherProvider:WeatherProvider {
-       // AusBureauOfMeteorology()
+      //  AusBureauOfMeteorology()
         /* or */
         OpenWeather(city: "Sydney,au", apiKey: OpenWeatherAPIKey)
+    }
+    
+    static var ausScrapeArguments:AusBureauOfMeteorology.ScrapeArguments {
+        AusBureauOfMeteorology.ScrapeArguments( forecastsURL: "http://www.bom.gov.au/nsw/forecasts/sydney.shtml",
+                                                observationURL: "http://www.bom.gov.au/nsw/observations/sydney.shtml",
+                                                observationTable: "<td headers=\"tSYDNEY-tmp tSYDNEY-station-sydney-observatory-hill\">" )
     }
 }

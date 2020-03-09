@@ -15,12 +15,12 @@ struct iTunesStoreResults  : Codable {
 }
 
 struct iTunesStoreRecord : Codable {
-    let artistName:String
-    let kind:String
+    let artistName:String?
+    let kind:String?
     let artistViewUrl:String?
-    let trackViewUrl:String
-    let artworkUrl100:String
-    let trackCensoredName:String
+    let trackViewUrl:String?
+    let artworkUrl100:String?
+    let trackCensoredName:String?
     
     enum iTunesRecordError : Int, ErrorsHelper {
         var domain:String { return "iTunesStoreRecord" }
@@ -37,7 +37,13 @@ struct iTunesStoreRecord : Codable {
     }
 
     func fetchArtwork( _ completion:@escaping (_ artwork100:NSUIImage?,_ error:NSError?)->Void ) {
-        guard let artUrl = URL(string: artworkUrl100) else {
+        
+        guard let validArtworkUrl100 = self.artworkUrl100 else {
+            completion( nil, iTunesRecordError.artworkUrlIsInvalid.nserror() )
+            return
+        }
+        
+        guard let artUrl = URL(string: validArtworkUrl100) else {
             completion( nil, iTunesRecordError.artworkUrlIsInvalid.nserror() )
             return
         }

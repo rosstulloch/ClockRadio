@@ -8,8 +8,6 @@
 
 import UIKit
 import AVFoundation
-import fliclib
-
 
 
 class ViewController: UIViewController, UIApplicationDelegate {
@@ -84,7 +82,7 @@ class ViewController: UIViewController, UIApplicationDelegate {
         self.bottomRightImage.image = self.albumImage
         
         GCDAdditions.perform(afterDelay:30.0) {
-            self.weatherDidChange()
+            self.weatherDidChange(self.weather)
         }
     }
 }
@@ -190,7 +188,7 @@ extension ViewController : RadioControllerDelegate {
     func handleiTunesRecordForCurrentTrack(_ itr:iTunesStoreRecord ) {
         print(itr)
 
-        self.albumText = "\(itr.trackCensoredName)\n\(itr.artistName)"
+        self.albumText = "\(itr.trackCensoredName ?? "")\n\(itr.artistName ?? "")"
         self.bottomRightLabel.text = self.albumText
 
         itr.fetchArtwork { image, error in
@@ -277,7 +275,7 @@ extension ViewController : WeatherDelegate {
         return false
     }
 
-    func weatherDidChange() {
+    func weatherDidChange(_ wp:WeatherProvider ) {
 
         if self.isNight == true {
             self.bottomRightLabel.text = self.weather.temperature
@@ -297,11 +295,11 @@ extension ViewController : WeatherDelegate {
     #endif
     }
     
-    func weatherError(error: NSError) {
+    func weatherError(error: Error) {
         #if IOS_SIMULATOR
-            ShowErrorAlert(error)
+            ShowErrorAlert(error as NSError)
         #endif
-        Debugging.LogError(error)
+        Debugging.LogError(error as NSError)
     }
 
 }

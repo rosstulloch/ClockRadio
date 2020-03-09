@@ -12,15 +12,19 @@ import XCTest
 class ClockRadioTerminalTests: XCTestCase, WeatherDelegate {
 
     var expect:XCTestExpectation?
+    var noErrorsExpect:XCTestExpectation?
 
-    func weatherDidChange() {
-     //   XCTAssert(wc.forecast?.hiC != nil)
-        expect!.fulfill()
+    func weatherDidChange(_ wp: WeatherProvider) {
+        
+        if wp.fullWeather.isEmpty == false && wp.temperature.isEmpty == false {
+            expect!.fulfill()
+        }
+        
+      //  XCTAssert(wc.forecast?.hiC != nil)
     }
     
-    func weatherError(error: NSError) {
-    //    XCTAssert(error == nil)
-        expect!.fulfill()
+    func weatherError(error: Error) {
+        noErrorsExpect!.fulfill()
     }
     
 
@@ -48,15 +52,26 @@ class ClockRadioTerminalTests: XCTestCase, WeatherDelegate {
     
         expect = expectation(description:"weather will be downloaded.")
         
-    //    let wc = WeatherController()
-    //    wc.delegate = self
-        
-    //    wc.forecastQuery(Preferences.forecastUrl)
-   //     waitForExpectations(timeout: 10)
+        noErrorsExpect = expectation(description:"no errors")
+        noErrorsExpect!.isInverted = true
 
-     //   expect = expectation(description:"weather will NOT be downloaded.")
-     //   WeatherController().forecastQuery(URL(string: "http://apple.com")!)
-     //   waitForExpectations(timeout: 10)
+        // AusBureauOfMeteorology
+        let args =  AusBureauOfMeteorology.ScrapeArguments( forecastsURL: "http://www.bom.gov.au/nsw/forecasts/sydney.shtml",
+                                                            observationURL: "http://www.bom.gov.au/nsw/observations/sydney.shtml",
+                                                            observationTable: "<td headers=\"tSYDNEY-tmp tSYDNEY-station-sydney-observatory-hill\">" )
+
+        AusBureauOfMeteorology(args).delegate = self
+        
+        
+        // OpenWeather
+        OpenWeather(city: "Sydney,au", apiKey: OpenWeatherAPIKey).delegate = self
+
+        
+        expect?.expectedFulfillmentCount = 2
+
+        
+        expect!.assertForOverFulfill = false
+        waitForExpectations(timeout: 5)
     }
     
     func testPerformanceExample() {

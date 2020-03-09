@@ -64,12 +64,12 @@
 /* Begin PBXFileReference section */
 		400BC10F1F83672E008F82CC /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Radio.swift; path = Source/Radio.swift; sourceTree = "<group>"; };
 		400BC1111F8368AD008F82CC /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = fliclib.framework; sourceTree = "<group>"; };
-		4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AusBureauOfMeteorology.swift; sourceTree = "<group>"; };
-		4030A6892413153200E6CA7A /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
+		4030A687241313E600E6CA7A /* AusBureauOfMeteorology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AusBureauOfMeteorology.swift; path = Source/AusBureauOfMeteorology.swift; sourceTree = "<group>"; };
+		4030A6892413153200E6CA7A /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherProvider.swift; path = Source/WeatherProvider.swift; sourceTree = "<group>"; };
 		4030A68B24131BD500E6CA7A /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
-		4030A68E24132C6E00E6CA7A /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeather.swift; sourceTree = "<group>"; };
-		4030A6902413381500E6CA7A /* OpenWeatherAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPIKey.swift; sourceTree = "<group>"; };
-		4030A69224135E2500E6CA7A /* ViewControllerFlicSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFlicSupport.swift; sourceTree = "<group>"; };
+		4030A68E24132C6E00E6CA7A /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenWeather.swift; path = Source/OpenWeather.swift; sourceTree = "<group>"; };
+		4030A6902413381500E6CA7A /* OpenWeatherAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenWeatherAPIKey.swift; path = Source/OpenWeatherAPIKey.swift; sourceTree = "<group>"; };
+		4030A69224135E2500E6CA7A /* ViewControllerFlicSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerFlicSupport.swift; path = Source/ViewControllerFlicSupport.swift; sourceTree = "<group>"; };
 		40668E771F8D6D7200FF1795 /* 21199__acclivity__morninghasbroken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 21199__acclivity__morninghasbroken.mp3; path = Resources/21199__acclivity__morninghasbroken.mp3; sourceTree = "<group>"; };
 		407E20E41DE0F5E90066F3F8 /* ClockRadioTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClockRadioTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407E20E71DE0F5E90066F3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		407E21391DE634310066F3F8 /* iTunesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesStore.swift; path = Source/iTunesStore.swift; sourceTree = "<group>"; };
 		407E21431DE636DA0066F3F8 /* DebuggingAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebuggingAdditions.swift; path = Source/DebuggingAdditions.swift; sourceTree = "<group>"; };
 		407E562D1F835E5B00CB00CC /* GCDAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GCDAdditions.swift; path = Source/GCDAdditions.swift; sourceTree = "<group>"; };
-		407F3D761F8731FF002F3749 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		407F3D761F8731FF002F3749 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Source/Preferences.swift; sourceTree = "<group>"; };
 		40B3B9C61E1BA36D001C6306 /* To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
 		40B788561F84CB7300A9D835 /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		40B7885A1F858C4100A9D835 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Defaults.plist; path = Resources/Defaults.plist; sourceTree = "<group>"; };
